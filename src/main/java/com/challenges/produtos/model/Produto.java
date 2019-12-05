@@ -1,7 +1,5 @@
 package com.challenges.produtos.model;
 
-import java.util.Date;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -10,7 +8,6 @@ import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotBlank;
-import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
 public class Produto {
@@ -22,20 +19,9 @@ public class Produto {
 	@NotBlank
 	private String nome;
 	
-	@NotBlank
-	private String descricao;
-	
-	@NotBlank
-	private Double custoUnitario;
-	
-	@NotBlank
-	private String fornecedor;
-	
-	@NotBlank
-	private String codBarras;
-	
-	@DateTimeFormat
-	private Date dataCadastro;
+	@NotNull
+	@Email
+	private String email;
 
 	public Long getId() {
 		return id;
@@ -53,44 +39,12 @@ public class Produto {
 		this.nome = nome;
 	}
 
-	public String getDescricao() {
-		return descricao;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
-	}
-
-	public Double getCustoUnitario() {
-		return custoUnitario;
-	}
-
-	public void setCustoUnitario(Double custoUnitario) {
-		this.custoUnitario = custoUnitario;
-	}
-
-	public String getFornecedor() {
-		return fornecedor;
-	}
-
-	public void setFornecedor(String fornecedor) {
-		this.fornecedor = fornecedor;
-	}
-
-	public String getCodBarras() {
-		return codBarras;
-	}
-
-	public void setCodBarras(String codBarras) {
-		this.codBarras = codBarras;
-	}
-
-	public Date getDataCadastro() {
-		return dataCadastro;
-	}
-
-	public void setDataCadastro(Date dataCadastro) {
-		this.dataCadastro = dataCadastro;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	@Override
