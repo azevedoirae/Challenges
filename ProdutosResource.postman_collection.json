@@ -1,0 +1,91 @@
+{
+	"variables": [],
+	"info": {
+		"name": "ProdutosResource",
+		"_postman_id": "a65ae462-ec80-b846-0c16-6a86b03a6c14",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Listar",
+			"request": {
+				"url": "http://localhost:8080/produtos",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar",
+			"request": {
+				"url": "http://localhost:8080/produtos/1",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Adicionar",
+			"request": {
+				"url": "http://localhost:8080/produtos",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nome\": \"iPhone 10\",\n\t\"descricao\": \"Prata\",\n\t\"custoUnitario\": \"4200.00\",\n\t\"fornecedor\": \"Apple\",\n\t\"codBarras\": \"0184200005721458796325410002\",\n\t\"dataCadastro\": \"2019-05-01\"\n}" 
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar",
+			"request": {
+				"url": "http://localhost:8080/produtos/1",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nome\": \"Galaxy S11\",\n\t\"descricao\": \"Preto\",\n\t\"custoUnitario\": \"4800.00\",\n\t\"fornecedor\": \"Samsung\",\n\t\"codBarras\": \"0184800005721458796325420001\",\n\t\"dataCadastro\": \"2019-05-01\"\n}" 
+
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Remover",
+			"request": {
+				"url": "http://localhost:8080/produtos/1",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

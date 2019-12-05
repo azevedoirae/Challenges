@@ -1,0 +1,8 @@
+CREATE TABLE produto(
+   id INT AUTO_INCREMENT PRIMARY KEY
+  ,nome VARCHAR(255) NOT NULL
+  ,descricao VARCHAR(255)
+  ,custoUnitario FLOAT
+  ,fornecedor VARCHAR(255) NOT NULL
+  ,codBarras VARCHAR(255) NOT NULL
+  ,dataCadastro DATE NOT NULL DEFAULT CURRENT_TIMESTAMP );
